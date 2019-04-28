@@ -5,131 +5,212 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="nofollow,noindex">
-    <link rel="stylesheet" href="offline/bootstrap.min.css">
-    <title>Diseñando la resiliencia => Usuarios + Contextos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Prototipo 3 | Diseñando para la resiliencia</title>
     <style>
-    	#desplegar div{
-    		display:none;
-    	}
+
+        header {
+            width: 100%;
+            height: 50vh;
+            background: linear-gradient(to bottom, rgba(51, 58, 63, 0.8) 0%, rgba(51, 58, 63, 1) 60%), url("http://wip.faco.cl/emergencia-1/img/bg-2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        
+        #desplegar div {
+            display: none;
+        }
+
+        .menu-toggle {
+          border:none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 30px;
+          height: 60px;
+          text-align: center;
+          line-height: 60px;
+          z-index: 999999;
+          border-radius: 0 0;
+        }
+
+        .btn-warning{
+            border:none;
+
+        }
+
+        .menu-toggle[aria-expanded="false"]:before {
+          content:"↓";
+        }
+
+        .menu-toggle[aria-expanded="true"]:before {
+          content:"↑";
+        }
     </style>
 </head>
 
 <body>
-    
+
+
+<button class="menu-toggle btn-primary" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+
+
+  <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
-        <div class="row">
-            <div class="col-12 py-5">
-
-  					<div class="input-group mb-3">
-  					  <div class="input-group-prepend">
-  					    <label class="input-group-text">Diseñando resiliencia para</label>
-  					  </div>
-
-  <select class="custom-select" id="first">
-      <option selected>Escoger…</option>
-      <option value="a" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>brigada de emergencia y rescate</option>
-      <option value="b" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>consumidores</option>
-      <option value="c" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>extranjeros</option>
-      <option value="d" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>familias</option>
-      <option value="h" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>personal de salubridad</option>
-      <option value="e" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>reclusos</option>
-      <option value="f" data-second='{ "names" : [{"name":"Escoger…"},{"name":"mitigación", "value":"4"}]}'>rubros de agricultura</option>
-      <option value="g" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>vecinos</option>
-  </select>
-
-  <!---
-
-    1 = preparación
-    2 = emergencia
-    3 = reconstrucción
-    4 = mitigación
-
-  --->
-
-
-  				  <div class="input-group-prepend">
-  					    <label class="input-group-text">en contexto de </label>
-  					  </div>
-  <select class="custom-select" id="second"></select>
-
-  					  <div class="input-group-append" id="btn">
+      <div class="row pt-5">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Diseñando para la resiliencia</h4>
+          <p class="text-muted"><strong>Habitamos en <a href="https://opinion.cooperativa.cl/opinion/emergencias/reducir-los-desastres-es-aprender-de-nuestro-pasado-y-de-nuestro-entorno/2019-04-23/064412.html" target="_blank">territorios de gran fragilidad geológica e hidrológica</a></strong>. Una limitada comprensión de las vulnerabilidades sociales de quienes habitamos en estos territorios nos expone a enfrentar, una y otra vez, situaciones de emergencia o desastre.</p>
+          <p class="text-muted">Diseñar para la <a href="https://www.unisdr.org/we/inform/terminology#letter-r" target="_blank">resilencia</a> es reconocer y ampliar la comprensión de tales vulnerabilidades, para aportar a que grupos de personas específicas puedan resistir, absorber, adaptarse y recuperarse de una situación de emergencia o desastre.</p>
+          <p class="text-muted">Los proyectos en este portafolio de diseño para resilencia han sido desarrollados por estudiantes y académicos de la <strong>Escuela de Diseño de la Pontificia Universidad Católica de Chile</strong>, quienes han contado con la guía y el apoyo del <strong>Centro Nacional de Investigación para la Gestión Integral del Riesgo de Desastres, CIGIDEN.</strong></p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Logos</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Diseño UC</a></li>
+            <li><a href="#" class="text-white">CIGIDEN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-  					  </div>  
-  					</div>
+    <header class="d-flex">
+        <div class="container text-center my-auto">
+
+            <!--comienza el menú-->
+            <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Diseñando resiliencia para</label>
+                </div>
+                <select class="custom-select" id="first">
+                    <option selected>Escoger…</option>
+                    <option value="f" data-second='{ "names" : [{"name":"Escoger…"},{"name":"mitigación", "value":"4"}]}'>agricultores</option>
+                    <option value="a" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>brigadas de emergencia y rescate</option>
+                    <option value="b" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>consumidores</option>
+                    <option value="c" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>extranjeros</option>
+                    <option value="d" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>familias</option>
+                    <option value="i" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>personal de salubridad</option>
+                    <option value="e" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>reclusos</option>
+                    <option value="g" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>vecinos</option>
+                </select>
+                <div class="input-group-prepend">
+                    <label class="input-group-text">en contexto de </label>
+                </div>
+                <select class="custom-select" id="second"></select>
+                <div class="input-group-append" id="btn">
+                </div>
+            </div>
+            <!--termina el menú-->
+
+        </div>
+    </header>
+
+    <aside class="container-fluid alert-secondary">
+        <div class="container">
+            <div class="row pt-4 pb-2 px-4" id="constructo"><p>&uarr; Selecciona usario y contexto para visualizar proyectos</p></div>
+        </div>
+    </aside>
 
 
+    <section class="container">
+        <div class="row mx-1">
+            <div class="col-12 mb-5">
+
+                <div id="desplegar" class="my-5 row">
+
+                </div>
             </div>
         </div>
+    </section>
+
+
+<footer class="footer mt-5">
+  <div class="container border-top py-3 text-muted small">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Prototipo 3 | Diseño para la resiliencia.</p>
+
     </div>
+</footer>
 
 
-<div class="container">
-  <div class="row alert alert-primary mx-1">
-    <div class="col-12 mb-5">
-  	<div id="desplegar" class="my-5 row">
+<script src="offline/jquery.min.js"></script>
 
-    <div class="a2 col-6 col-sm-4 pb-4"><h3>Contra</h3><p>Para [brigadas de emergencia y rescate] en contexto de [emergencia]</p></div>
-  	<div class="h2 col-6 col-sm-4 pb-4"><h3>D-Casket</h3><p>Para [personal de salubridad] en contexto de [emergencia]</p></div>
-  	<div class="a2 col-6 col-sm-4 pb-4"><h3>Kits de Ayudar Humanitaria </h3><p>Para [brigadas de emergencia] y rescate en contexto de [emergencia]</div>
-  	<div class="b1 col-6 col-sm-4 pb-4"><h3>Subliminal </h3><p>Para [consumidores] en contexto de [preparación]</p></div>
-  	<div class="c1 col-6 col-sm-4 pb-4"><h3>SOS Chile</h3><p>Para [extranjeros] en contexto de [preparación]</p></div>
-  	<div class="d2 col-6 col-sm-4 pb-4"><h3>Mio</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2 col-6 col-sm-4 pb-4"><h3>KO</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2 col-6 col-sm-4 pb-4"><h3>Baby Pro-Tek</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2 col-6 col-sm-4 pb-4"><h5>Kit de emergencia para niños</h3><p>Para [familias] en contexto de [emergencia]</h5></div>
-    <div class="e2 col-6 col-sm-4 pb-4"><h3>El Casco</h3><p>Para [reclusos] en contexto de [emergencia]</p></div>
-    <div class="f4 col-6 col-sm-4 pb-4"><h3>Bee-da </h3><p>Para [rubros de agricultura] en contexto de [mitigación]</p></div>
-    <div class="g1 g2 col-6 col-sm-4 pb-4"><h3>Guemil</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
-    <div class="g1 col-6 col-sm-4 pb-4"><h3>Nuestro Punto Seguro</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
-    <div class="g2 col-6 col-sm-4 pb-4"><h3>Sistema de indentificadores Aéreos</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-    <div class="g2 col-6 col-sm-4 pb-4"><h3>Aquakit</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-    <div class="g2 col-6 col-sm-4 pb-4"><h3>Fresh Water</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-	</div>
-   </div>
-    </div>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-    <script src="offline/bootstrap.min.css"></script>
-    <script src="offline/jquery.min.js"></script>
-    <script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js"></script>
+
+<script>
+        
+        $(document).ready(function() {
 
 
+        // CON LA SIGUIENTE FUNCIÓN CREO CADA "TARJETA DE PROYECTO"
 
-    $(document).ready(function(){
-        $("#first").change(function(){
-            $("#second option").remove();
+        Papa.parse("https://raw.githubusercontent.com/facoasecas/resilience-01/gh-pages/datos.csv", {
+            download: true,
+            header: true,
+            complete: function(data) {
+                console.log(data);
+                data.data.forEach(function(d, i) {
+                    $("#desplegar").append('<div class="col-6 col-sm-4 ' + d.category + '"><h5>' + d.title + '</h5><p>' + d.context + ' de ' + d.author + '</p><p style="min-height:150px"><small>' + d.excerpt + '</small><hr /></p></div>');
+                });
 
-            var names = $("#first option:selected").data('second').names;
-            var newoptions = "";
-            for(var i = 0; i < names.length; i++){
-                newoptions+="<option value=" + names[i].value + ">"+ names[i].name +"</option>";                            
             }
-            $("#second").append(newoptions);
-        });        
-
-        $("#second").change(function() {
-          $('#btn').html("<button class='btn btn-sm btn-primary'>Ver</button>");
         });
 
-        $('#btn').click(function(){
-          var usuarioSeleccionado = document.getElementById("first").value;
-          var contextoSeleccionado = document.getElementById("second").value;
+        // LA SIGUIENTE FUNCIÓN LLENA LAS OPCIONES QUE CORRESPONDE EN LOS 2 SELECT
 
-          alert(usuarioSeleccionado + contextoSeleccionado);
 
-            $("#desplegar div").hide();
-            $('.'+(usuarioSeleccionado + contextoSeleccionado)).show();
+            $("#first").change(function() {
+                $("#second option").remove();
 
+                var names = $("#first option:selected").data('second').names;
+                var newoptions = "";
+                for (var i = 0; i < names.length; i++) {
+                    newoptions += "<option value=" + names[i].value + ">" + names[i].name + "</option>";
+                }
+                $("#second").append(newoptions);
+            });
+
+            // LA SIGUIENTE FUNCIÓN HACE APARECER EL BOTÓN UNA VEZ SE SELECCIONE LA SEGUNDA OPCIÓN, NO ANTES. 
+
+            $("#second").change(function() {
+
+                $('#btn').html("<button class='btn btn-sm btn-primary'>Ver</button>");
+
+            });
+
+            // LA SIGUIENTE FUNCIÓN MUESTRA LAS TARJETAS QUE CORRESPONDE A LA OPCIÓN, DESPUÉS DEL CLIC DEL BOTÓN
+
+            $('#btn').click(function() {
+
+                $("#constructo p").remove();
+
+                var usuarioSeleccionado = document.getElementById("first").value;
+
+                var contextoSeleccionado = document.getElementById("second").value;
+
+                $("#constructo").append('<p>&uarr; Se muestran proyectos con código <strong>'+usuarioSeleccionado + contextoSeleccionado+'</strong></p>')
+
+                $("#desplegar div").hide();
+
+                $('.' + (usuarioSeleccionado + contextoSeleccionado)).show();
+
+            });
 
         });
 
-    });
-
-
-
-    </script>
+</script>
 
 </body>
 
