@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="nofollow,noindex">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="offline/bootstrap.min.css">
     <title>Diseñando la resiliencia => Usuarios + Contextos</title>
     <style>
     	#desplegar div{
@@ -24,15 +24,38 @@
   					  <div class="input-group-prepend">
   					    <label class="input-group-text">Diseñando resiliencia para</label>
   					  </div>
-  					  <select class="custom-select" id="usuarios">
-  					  	<option selected>Escoge…</option>
-  					  </select>
-  					  <div class="input-group-prepend">
+
+  <select class="custom-select" id="first">
+      <option selected>Escoger…</option>
+      <option value="a" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>brigada de emergencia y rescate</option>
+      <option value="b" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>consumidores</option>
+      <option value="c" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"}]}'>extranjeros</option>
+      <option value="d" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>familias</option>
+      <option value="h" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>personal de salubridad</option>
+      <option value="e" data-second='{ "names" : [{"name":"Escoger…"},{"name":"emergencia", "value":"2"}]}'>reclusos</option>
+      <option value="f" data-second='{ "names" : [{"name":"Escoger…"},{"name":"mitigación", "value":"4"}]}'>rubros de agricultura</option>
+      <option value="g" data-second='{ "names" : [{"name":"Escoger…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>vecinos</option>
+  </select>
+
+  <!---
+
+    1 = preparación
+    2 = emergencia
+    3 = reconstrucción
+    4 = mitigación
+
+  --->
+
+
+  				  <div class="input-group-prepend">
   					    <label class="input-group-text">en contexto de </label>
   					  </div>
-  					  <select class="custom-select" id="contextos">
-  					  </select>
+  <select class="custom-select" id="second"></select>
+
   					  <div class="input-group-append" id="btn">
+
+
+
   					  </div>  
   					</div>
 
@@ -45,111 +68,66 @@
 <div class="container">
   <div class="row alert alert-primary mx-1">
     <div class="col-12 mb-5">
-  	<div id="desplegar" class="my-5">
+  	<div id="desplegar" class="my-5 row">
 
-    <div class="a1"><h5>No hay proyectos para [brigadas de emergencia y rescate] en contexto de [preparación]</h5></div>
-    <div class="a2"><h3>Contra</h3><p>Para [brigadas de emergencia y rescate] en contexto de [emergencia]</p></div>
-  	<div class="a2"><h3>D-Casket</h3><p>Para [brigadas de emergencia y rescate] en contexto de [emergencia]</p></div>
-  	<div class="a2"><h3>Kits de Ayudar Humanitaria </h3><p>Para [brigadas de emergencia] y rescate en contexto de [emergencia]</div>
-    <div class="a3"><h5>No hay proyectos para [brigadas de emergencia y rescate] en contexto de [recontrucción]</h5></div>
-    <div class="a4"><h5>No hay proyectos para [brigadas de emergencia y rescate] en contexto de [mitigación]</h5></div>
-
-  	<div class="b1"><h3>Subliminal </h3><p>Para [consumidores] en contexto de [preparación]</p></div>
-    <div class="b2"><h5>No hay proyectos para [consumidores] en contexto de [emergencia]</h5></div>
-    <div class="b3"><h5>No hay proyectos para [consumidores] en contexto de [reconstrucción]</h5></div>
-    <div class="b4"><h5>No hay proyectos para [consumidores] en contexto de [mitigación]</h5></div>
-
-  	<div class="c1"><h3>SOS Chile</h3><p>Para [extranjeros] en contexto de [preparación]</p></div>
-    <div class="c2"><h5>No hay proyectos para [extranjeros] en contexto de [emergencia]</h5></div>
-    <div class="c3"><h5>No hay proyectos para [extranjeros] en contexto de [reconstrucción]</h5></div>
-    <div class="c4"><h5>No hay proyectos para [extranjeros] en contexto de [mitigación]</h5></div>
-
-    <div class="d1"><h5>No hay proyectos para [familias] en contexto de [preparación]</h5></div>
-  	<div class="d2"><h3>Mio</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2"><h3>KO</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2"><h3>Baby Pro-Tek</h3><p>Para [familias] en contexto de [emergencia]</p></div>
-  	<div class="d2"><h3>Kit de emergencia para niños</h3><p>Para [familias] en contexto de [emergencia]</h5></div>
-    <div class="d3"><h5>No hay proyectos para [familias] en contexto de [reconstrucción]</h5></div>
-    <div class="d4"><h5>No hay proyectos para [familias] en contexto de [mitigación]</h5></div>
-  	
-    <div class="e1"><h5>No hay proyectos para [reclusos] en contexto de [preparación]</h5></div>
-    <div class="e2"><h3>El Casco</h3><p>Para [reclusos] en contexto de [emergencia]</p></div>
-    <div class="e3"><h5>No hay proyectos para [reclusos] en contexto de [reconstrucción]</h5></div>
-    <div class="e4"><h5>No hay proyectos para [reclusos] en contexto de [mitigación]</h5></div>
-
-    <div class="f1"><h5>No hay proyectos para [rubros de agricultura] en contexto de [preparación]</h5></div>
-    <div class="f2"><h5>No hay proyectos para [rubros de agricultura] en contexto de [emergencia]</h5></div>
-    <div class="f3"><h5>No hay proyectos para [rubros de agricultura] en contexto de [reconstrucción]</h5></div>
-    <div class="f4"><h3>Bee-da </h3><p>Para [rubros de agricultura] en contexto de [mitigación]</p></div>
-
-    <div class="g1"><h3>Guemil</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
-    <div class="g1"><h3>Nuestro Punto Seguro</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
-    <div class="g2"><h3>Sistema de indentificadores Aéreos</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-    <div class="g2"><h3>Aquakit</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-    <div class="g2"><h3>Fresh Water</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
-    <div class="g2"><h3>Guemil</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>    
-    <div class="g3"><h5>No hay proyectos para [vecinos] en contexto de [reconstrucción]</h5></div>
-    <div class="g4"><h3>Sistema de prevención en zonas costeras</h3><p>Para [vecinos] en contexto de [mitigación]</p></div>
+    <div class="a2 col-6 col-sm-4 pb-4"><h3>Contra</h3><p>Para [brigadas de emergencia y rescate] en contexto de [emergencia]</p></div>
+  	<div class="h2 col-6 col-sm-4 pb-4"><h3>D-Casket</h3><p>Para [personal de salubridad] en contexto de [emergencia]</p></div>
+  	<div class="a2 col-6 col-sm-4 pb-4"><h3>Kits de Ayudar Humanitaria </h3><p>Para [brigadas de emergencia] y rescate en contexto de [emergencia]</div>
+  	<div class="b1 col-6 col-sm-4 pb-4"><h3>Subliminal </h3><p>Para [consumidores] en contexto de [preparación]</p></div>
+  	<div class="c1 col-6 col-sm-4 pb-4"><h3>SOS Chile</h3><p>Para [extranjeros] en contexto de [preparación]</p></div>
+  	<div class="d2 col-6 col-sm-4 pb-4"><h3>Mio</h3><p>Para [familias] en contexto de [emergencia]</p></div>
+  	<div class="d2 col-6 col-sm-4 pb-4"><h3>KO</h3><p>Para [familias] en contexto de [emergencia]</p></div>
+  	<div class="d2 col-6 col-sm-4 pb-4"><h3>Baby Pro-Tek</h3><p>Para [familias] en contexto de [emergencia]</p></div>
+  	<div class="d2 col-6 col-sm-4 pb-4"><h5>Kit de emergencia para niños</h3><p>Para [familias] en contexto de [emergencia]</h5></div>
+    <div class="e2 col-6 col-sm-4 pb-4"><h3>El Casco</h3><p>Para [reclusos] en contexto de [emergencia]</p></div>
+    <div class="f4 col-6 col-sm-4 pb-4"><h3>Bee-da </h3><p>Para [rubros de agricultura] en contexto de [mitigación]</p></div>
+    <div class="g1 g2 col-6 col-sm-4 pb-4"><h3>Guemil</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
+    <div class="g1 col-6 col-sm-4 pb-4"><h3>Nuestro Punto Seguro</h3><p>Para [vecinos] en contexto de [preparación]</p></div>
+    <div class="g2 col-6 col-sm-4 pb-4"><h3>Sistema de indentificadores Aéreos</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
+    <div class="g2 col-6 col-sm-4 pb-4"><h3>Aquakit</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
+    <div class="g2 col-6 col-sm-4 pb-4"><h3>Fresh Water</h3><p>Para [vecinos] en contexto de [emergencia]</p></div>
 	</div>
    </div>
     </div>
 </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="offline/bootstrap.min.css"></script>
+    <script src="offline/jquery.min.js"></script>
     <script>
 
 
 
-        var usuarios = [
-        	{name : "brigadas de emergencia y rescate",value: "a"},
-        	{name: "consumidores",value: "b"},
-        	{name: "extranjeros",value: "c"},
-        	{name: "familias",value: "d"},
-          {name: "internos",value: "e"},
-        	{name: "rubros de agricultura",value: "f"},
-          {name : "vecinos",value: "g"}
-        ];
+    $(document).ready(function(){
+        $("#first").change(function(){
+            $("#second option").remove();
 
-        $.each(usuarios, function(i,u) {
-            $('#usuarios').append($('<option value="' + u.value + '"></option>').html(u.name));
-        });
-
-        $("#usuarios").change(function() {
-            
-            $("#contextos option").remove()
-
-            var user = document.getElementById("usuarios").value;
-            
-            var contexto;
-
-			       if ( user == "Escoge…" ) {
-              contexto = [];
-            } else {
-              contexto = ["preparación", "emergencia", "reconstrucción", "mitigación"]
+            var names = $("#first option:selected").data('second').names;
+            var newoptions = "";
+            for(var i = 0; i < names.length; i++){
+                newoptions+="<option value=" + names[i].value + ">"+ names[i].name +"</option>";                            
             }
+            $("#second").append(newoptions);
+        });        
 
-            $('#contextos').html('<option selected>Escoge…</option>');
-
-            $.each(contexto, function(i, p) {
-                $('#contextos').append($('<option value="' + (i+1) + '"></option>').html(p));
-            });
+        $("#second").change(function() {
+          $('#btn').html("<button class='btn btn-sm btn-primary'>Ver</button>");
         });
 
-        $("#contextos").change(function() {
-        	$('#btn').html("<button onclick='mostrar()' class='btn btn-sm btn-primary'>Ver</button>");
-        });
+        $('#btn').click(function(){
+          var usuarioSeleccionado = document.getElementById("first").value;
+          var contextoSeleccionado = document.getElementById("second").value;
 
-        function mostrar(){
-
-        	var usuarioSeleccionado = document.getElementById("usuarios").value;
-        	var contextoSeleccionado = document.getElementById("contextos").value;
-
-			alert(usuarioSeleccionado + contextoSeleccionado);
+          alert(usuarioSeleccionado + contextoSeleccionado);
 
             $("#desplegar div").hide();
             $('.'+(usuarioSeleccionado + contextoSeleccionado)).show();
 
-        }
+
+        });
+
+    });
+
+
 
     </script>
 
