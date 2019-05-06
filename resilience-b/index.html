@@ -15,8 +15,8 @@
         body{
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            color:black;
-            background:white;
+            color:white;
+            background:#222;
         }
 
 
@@ -46,7 +46,7 @@
         }
         
 
-        aside{overflow-x: hidden;}
+        aside{overflow: hidden;}
 
         #desplegar div {
             display: none;
@@ -115,11 +115,18 @@
 <aside id="play"></aside>
 
 <footer class="mt-3">
-  <div class="container py-3 text-muted small">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Prototipo 4 | Diseñando resiliencia.</p>
+  <div class="container py-3 small">
+
+  <div class="row">
+      
+    <div class="col-sm-7 text-center text-sm-left"><p class="mt-5 ml-sm-2">DESIGNING RESILIENCE @ CHILE</p></div>
+    <div class="col-sm-5 text-center text-sm-right">
+        <div class="row">
+            <div class="col"><a href="http://diseno.uc.cl/" target="_blank"><img src="../img/escuela.png" class="img-fluid mx-3 mb-2"></a></div>
+            <div class="col"><a href="http://cigiden.cl/" target="_blank"><img src="../img/cigiden.png" class="img-fluid mx-3 mb-2"></a></div>
+        </div>   
+    </div>
+  </div>
 
     </div>
 </footer>
@@ -199,16 +206,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 
 <script>
-let noiseScale=0.025;
+let noiseScale=0.02;
 
 function setup(){
-    createCanvas(windowWidth,100).parent("play");
+    createCanvas(windowWidth,50).parent("play");
     background("#fbc02d");
-    stroke(255);
+    stroke("#222222");
     strokeWeight(2)
     for (let x=0; x < width; x++) {
         let noiseVal = noise((mouseX+x)*noiseScale, mouseY*noiseScale);
-        line(x, noiseVal*50, x, height);
+        line(x, noiseVal*40, x, height);
     }
 }
 
