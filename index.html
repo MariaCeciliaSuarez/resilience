@@ -1,216 +1,30 @@
 <!doctype html>
-<html lang="es">
-
-<head>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="robots" content="nofollow,noindex">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prototipo 3 | Diseñando resiliencia</title>
-    <style>
 
-		@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:200,400,600,700');
-
-
-        body{
-            font-family: 'IBM Plex Sans Condensed', sans-serif;
-            font-weight: 400;
-        }
-
-        header {
-            width: 100%;
-            height:auto;
-            min-height: 15vh;
-            background:rgba(225, 75, 50, 1.00);
-
-        }
-
-        a{color:rgba(255, 83, 48, 1);}
-
-        a:hover{color:rgba(225, 75, 50,1);}
-
-        main{    
-            background: rgba(240,240,240,1);
-        }
-        
-        #desplegar div {
-            display: none;
-        }
-
-        .menu-toggle {
-          border:none;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 30px;
-          height: 60px;
-          text-align: center;
-          line-height: 60px;
-          z-index: 999999;
-          border-radius: 0 0;
-        }
-
-        .btn-warning{
-            border:none;
-
-        }
-
-        .menu-toggle[aria-expanded="false"]:before {
-          content:"↓";
-        }
-
-        .menu-toggle[aria-expanded="true"]:before {
-          content:"↑";
-        }
-    </style>
-</head>
-
-<body>
-
-
-    <header class="d-flex">
-        <div class="container text-center my-auto">
-
-            <!--comienza el menú-->
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <label class="input-group-text">Diseñando resiliencia para</label>
-                </div>
-                <select class="custom-select" id="first">
-                    <option selected>…</option>
-                    <option value="f" data-second='{ "names" : [{"name":"…"},{"name":"mitigación", "value":"4"}]}'>agricultores</option>
-                    <option value="a" data-second='{ "names" : [{"name":"…"},{"name":"emergencia", "value":"2"}]}'>brigadistas de emergencia y rescate</option>
-                    <option value="b" data-second='{ "names" : [{"name":"…"},{"name":"preparación", "value":"1"}]}'>consumidores</option>
-                    <option value="d" data-second='{ "names" : [{"name":"…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>familias</option>
-                    <option value="i" data-second='{ "names" : [{"name":"…"},{"name":"emergencia", "value":"2"}]}'>profesionales de la salud</option>
-                    <option value="e" data-second='{ "names" : [{"name":"…"},{"name":"emergencia", "value":"2"}]}'>reclusos</option>
-                    <option value="c" data-second='{ "names" : [{"name":"…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>turistas</option>
-                    <option value="g" data-second='{ "names" : [{"name":"…"},{"name":"preparación", "value":"1"},{"name":"emergencia", "value":"2"}]}'>vecinos</option>
-                </select>
-                <div class="input-group-prepend">
-                    <label class="input-group-text">en contexto de </label>
-                </div>
-                <select class="custom-select" id="second"></select>
-                <div class="input-group-append" id="btn">
-                </div>
-            </div>
-            <!--termina el menú-->
-
-        </div>
-    </header>
-
-    <aside class="container-fluid" style="background:rgba(108, 117, 124, 1.00);">
-        <div class="container">
-            <div class="row pt-3 pb-1 px-4 text-white" id="constructo"><p>designing resilience | portfolio</p></div>
-        </div>
-    </aside>
-
-
-    <main>
+    <title>Hola mundo!</title>
+  </head>
+  <body>
     <div class="container">
-        <div class="row mx-1 pb-5">
-            <div class="col-12 mb-3 mt-5">
-                <div id="desplegar" class="row"><!--gracias JS--></div>
-
-                <div id="modalidad"><!--gracias JS--></div>
-            </div>
-            <div class="col-12 mt-1 text-muted" style="font-weight:200; font-size:140%">
-              <p><a href="https://opinion.cooperativa.cl/opinion/emergencias/reducir-los-desastres-es-aprender-de-nuestro-pasado-y-de-nuestro-entorno/2019-04-23/064412.html" target="_blank">Habitamos en territorios de gran fragilidad geológica e hidrológica</a>. Una limitada comprensión de las vulnerabilidades sociales de quienes habitamos en estos territorios nos expone, una y otra vez, a enfrentar situaciones de emergencia o desastre.</p>
-              <p>Diseñar <a href="https://www.unisdr.org/we/inform/terminology#letter-r" target="_blank">resilencia</a> es reconocer y ampliar la comprensión de tales vulnerabilidades, para aportar a que las personas puedan resistir, absorber, adaptarse y/o recuperarse de cada situación previsible de emergencia o desastre.</p>
-              <p>Los proyectos en este portafolio han sido desarrollados por estudiantes y académicos de la <a href="http://diseno.uc.cl/" target="_blank">Escuela de Diseño de la Pontificia Universidad Católica de Chile</a>, quienes han contado con la guía y el apoyo del <a href="https://www.cigiden.cl/" target="_blank">Centro Nacional de Investigación para la Gestión Integral del Riesgo de Desastres, CIGIDEN.</a></p>
-            </div>
+      <div class="row">
+        <div class="col py-5">
+          <p><a href="resilience-a/index.html">A</a></p>
+          <p><a href="resilience-b/index.html">B</a></p>
+          <p><a href="resilience-c/index.html">C</a></p>        
         </div>
+      </div>
     </div>
 
-    </main>
-
-<footer class="mt-3">
-  <div class="container py-3 text-muted small">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Prototipo 3 | Diseñando resiliencia.</p>
-
-    </div>
-</footer>
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js"></script>
-
-<script>
-        
-        $(document).ready(function() {
-
-
-        // CON LA SIGUIENTE FUNCIÓN CREO CADA "TARJETA DE PROYECTO"
-
-        Papa.parse("https://raw.githubusercontent.com/facoasecas/resilience-01/gh-pages/datos.csv", {
-            download: true,
-            header: true,
-            complete: function(data) {
-                console.log(data);
-                data.data.forEach(function(d, i) {
-                    $("#desplegar").append('<div class="col-12 col-sm-6 col-md-4 col-lg-3 ' + d.category + '"><h5><a href="#" data-toggle="modal" data-target="#modal' + i + '">' + d.title + '</a></h5><p>' + d.context + ' de ' + d.author + '</p><p><small>' + d.excerpt + '</small><hr class="mt-4 mb-5"></p></div>');
-                
-                    $("#modalidad").append('<div class="modal fade" id="modal' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">' + d.title + '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body p-5"><img src="' + d.pic + '" class="img-fluid"><br/>' + d.content + '</div></div></div></div>');
-                });
-
-            }
-        });
-
-        // LA SIGUIENTE FUNCIÓN LLENA LAS OPCIONES QUE CORRESPONDE EN LOS 2 SELECT
-
-
-            $("#first").change(function() {
-                $("#second option").remove();
-
-                var names = $("#first option:selected").data('second').names;
-                var newoptions = "";
-                for (var i = 0; i < names.length; i++) {
-                    newoptions += "<option value=" + names[i].value + ">" + names[i].name + "</option>";
-                }
-                $("#second").append(newoptions);
-            });
-
-            // LA SIGUIENTE FUNCIÓN HACE APARECER EL BOTÓN UNA VEZ SE SELECCIONE LA SEGUNDA OPCIÓN, NO ANTES. 
-
-            $("#second").change(function() {
-
-                $('#btn').html("<button class='btn btn-sm btn-secondary'>Ver proyectos</button>");
-
-            });
-
-            // LA SIGUIENTE FUNCIÓN MUESTRA LAS TARJETAS QUE CORRESPONDE A LA OPCIÓN, DESPUÉS DEL CLIC DEL BOTÓN
-
-            $('#btn').click(function() {
-
-                $("#constructo p").remove();
-
-                var usuarioSeleccionado = document.getElementById("first").value;
-
-                var contextoSeleccionado = document.getElementById("second").value;
-
-                $("#constructo").append('<p>designing resilience | portfolio | showing <strong>'+usuarioSeleccionado + contextoSeleccionado+'</strong></p>')
-
-                $("#desplegar div").hide();
-
-                $('.' + (usuarioSeleccionado + contextoSeleccionado)).show(100);
-
-            });
-
-        });
-
-</script>
-
-</body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
